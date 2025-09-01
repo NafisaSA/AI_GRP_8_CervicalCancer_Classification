@@ -19,3 +19,9 @@ Summary of experiments and methodology:
 
 In this study, multiple deep learning approaches were implemented and evaluated for cervical cancer image classification. All experiments were conducted on the Kaggle platform using GPU acceleration. Transfer learning was applied with pretrained models such as MobileNet and VGG, where the final classification layers were fine-tuned for the dataset. In addition, a custom Convolutional Neural Network (CNN) was designed and trained from scratch to serve as a baseline. To further enhance performance, a hybrid CNN-SVM model was developed, where the CNN acted as a feature extractor and the final classification was performed using a Support Vector Machine (SVM). This methodology enabled a comparative analysis of pretrained networks, a custom CNN, and a hybrid deep learning–machine learning approach for cervical cancer detection.
 
+
+Instructions for running the code:
+
+To run the code, a new Kaggle notebook should be created and the GPU accelerator enabled from the notebook settings to ensure efficient training. The Multi Cancer dataset, specifically the cervical cancer subset, must be added to the notebook through the Add Data option, and the dataset path in the code should be updated accordingly (e.g., /kaggle/input/multi-cancer/Multi Cancer/Multi Cancer/Cervical Cancer). Once the setup is complete, the notebook cells should be executed sequentially, which will train and evaluate different models including MobileNet, VGG, a custom CNN, and a hybrid CNN-SVM. During execution, the training progress, accuracy, and loss plots will be displayed, followed by evaluation on the test dataset with results such as accuracy scores and confusion matrices. Finally, trained models can be saved using the model.save("model_name.h5") function, and the saved files will be available in the /kaggle/working/ directory for download and future use.
+
+
